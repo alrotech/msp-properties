@@ -1,0 +1,4 @@
+This file shows the changes in recent releases of mspConf.
+
+mspConf 0.1.0-pl ()
+- Initial release.
