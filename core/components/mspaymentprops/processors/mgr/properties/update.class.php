@@ -8,9 +8,9 @@
 include_once 'base.class.php';
 
 /**
- * Class mspConfPaymentPropertiesUpdateProcessor
+ * Class msPaymentPropsPaymentPropertiesUpdateProcessor
  */
-class mspConfPaymentPropertiesUpdateProcessor extends mspConfPaymentPropertiesBaseProcessor
+class PaymentPropertiesUpdateProcessor extends PaymentPropertiesBaseProcessor
 {
     public function process()
     {
@@ -23,8 +23,8 @@ class mspConfPaymentPropertiesUpdateProcessor extends mspConfPaymentPropertiesBa
 
         return $this->savePaymentProperties($properties)
             ? $this->success()
-            : $this->failure($this->modx->lexicon('mspconf_save_props_err'));
+            : $this->failure($this->modx->lexicon('mspp_save_props_err'));
     }
 }
 
-return mspConfPaymentPropertiesUpdateProcessor::class;
+return PaymentPropertiesUpdateProcessor::class;

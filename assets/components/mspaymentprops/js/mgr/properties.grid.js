@@ -4,11 +4,11 @@
  * Full license text placed in the LICENSE file in the repository or in the license.txt file in the package.
  */
 
-msPaymentConfiguration.grid.PaymentProperties = function(config) {
+msPaymentProps.grid.PaymentProperties = function(config) {
     config = config || {};
 
     Ext.applyIf(config, {
-        url: msPaymentConfiguration.ownConnector,
+        url: msPaymentProps.ownConnector,
         baseParams: {
             action: 'mgr/properties/getlist',
             payment: config.payment
@@ -36,10 +36,10 @@ msPaymentConfiguration.grid.PaymentProperties = function(config) {
         }]
     });
 
-    msPaymentConfiguration.grid.PaymentProperties.superclass.constructor.call(this, config);
+    msPaymentProps.grid.PaymentProperties.superclass.constructor.call(this, config);
 };
 
-Ext.extend(msPaymentConfiguration.grid.PaymentProperties, MODx.grid.Grid, {
+Ext.extend(msPaymentProps.grid.PaymentProperties, MODx.grid.Grid, {
 
     getTopBar: function getTopBar() {
         return [{
@@ -68,7 +68,7 @@ Ext.extend(msPaymentConfiguration.grid.PaymentProperties, MODx.grid.Grid, {
 
     addProperty: function addProperty() {
         MODx.load({
-            xtype: 'webpay-window-payment-property',
+            xtype: 'mspp-window-payment-property',
             new: true,
             grid: this,
             payment: this.config.payment,
@@ -84,9 +84,9 @@ Ext.extend(msPaymentConfiguration.grid.PaymentProperties, MODx.grid.Grid, {
 
     deleteProperty: function deleteProperty() {
         MODx.msg.confirm({
-            title: _('ms2_payment_webpay_remove_setting'),
-            text: _('ms2_payment_webpay_remove_setting_desc'),
-            url: WebPayPayment.ownConnector,
+            title: _('mspp_remove_setting'),
+            text: _('mspp_remove_setting_desc'),
+            url: msPaymentProps.ownConnector,
             params: {
                 action: 'mgr/properties/delete',
                 payment: this.config.payment,
@@ -109,7 +109,7 @@ Ext.extend(msPaymentConfiguration.grid.PaymentProperties, MODx.grid.Grid, {
 
     editProperty: function editProperty(btn, e) {
         var window = MODx.load({
-            xtype: 'webpay-window-payment-property',
+            xtype: 'mmspp-window-payment-property',
             grid: this,
             payment: this.config.payment,
             listeners: {
@@ -140,9 +140,9 @@ Ext.extend(msPaymentConfiguration.grid.PaymentProperties, MODx.grid.Grid, {
 
     clearAll: function clearAll() {
         MODx.msg.confirm({
-            title: _('ms2_payment_webpay_remove_all'),
-            text: _('ms2_payment_webpay_remove_all_desc'),
-            url: WebPayPayment.ownConnector,
+            title: _('mspp_remove_all'),
+            text: _('mspp_remove_all_desc'),
+            url: msPaymentProps.ownConnector,
             params: {
                 action: 'mgr/properties/delete',
                 payment: this.config.payment,
@@ -164,4 +164,4 @@ Ext.extend(msPaymentConfiguration.grid.PaymentProperties, MODx.grid.Grid, {
     }
 
 });
-Ext.reg('mspconf-grid-payment-properties', msPaymentConfiguration.grid.PaymentProperties);
+Ext.reg('mspp-grid-payment-properties', msPaymentProps.grid.PaymentProperties);

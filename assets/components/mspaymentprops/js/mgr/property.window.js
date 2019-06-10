@@ -4,15 +4,15 @@
  * Full license text placed in the LICENSE file in the repository or in the license.txt file in the package.
  */
 
-WebPayPayment.window.PaymentProperty = function (config) {
+msPaymentProps.window.PaymentProperty = function (config) {
     config = config || { new: false };
 
     if (!config.id) {
-        config.id = 'webpay-window-payment-property'
+        config.id = 'mspp-window-payment-property'
     }
 
     Ext.applyIf(config, {
-        url: WebPayPayment.ownConnector,
+        url: msPaymentProps.ownConnector,
         layout: 'anchor',
         cls: 'modx-window',
         modal: true,
@@ -29,7 +29,7 @@ WebPayPayment.window.PaymentProperty = function (config) {
         closeAction: 'close'
     });
 
-    WebPayPayment.window.PaymentProperty.superclass.constructor.call(this, config);
+    msPaymentProps.window.PaymentProperty.superclass.constructor.call(this, config);
 
     this.on('hide', function () {
         var self = this;
@@ -39,11 +39,11 @@ WebPayPayment.window.PaymentProperty = function (config) {
     });
 };
 
-Ext.extend(WebPayPayment.window.PaymentProperty, MODx.Window, {
+Ext.extend(msPaymentProps.window.PaymentProperty, MODx.Window, {
 
     dynamicValueField: function dynamicValueField(xtype, value) {
-        var form = Ext.getCmp('webpay-window-payment-property-form');
-        var field = Ext.getCmp('webpay-property-value');
+        var form = Ext.getCmp('mspp-window-payment-property-form');
+        var field = Ext.getCmp('mspp-property-value');
 
         form.remove(field);
         form.add({
@@ -52,7 +52,7 @@ Ext.extend(WebPayPayment.window.PaymentProperty, MODx.Window, {
             xtype: xtype,
             value: value,
             anchor: '100%',
-            id: 'webpay-property-value'
+            id: 'mspp-property-value'
         });
         form.doLayout();
     },
@@ -61,10 +61,10 @@ Ext.extend(WebPayPayment.window.PaymentProperty, MODx.Window, {
         return [{
             layout: 'form',
             defaults: { msgTarget: 'under', autoHeight: true },
-            id: 'webpay-window-payment-property-form',
+            id: 'mspp-window-payment-property-form',
             items: [{
                 fieldLabel: _('parameter'),
-                xtype: 'webpay-combo-settings',
+                xtype: 'mspp-combo-settings',
                 name: 'key',
                 anchor: '100%',
                 readOnly: !config.new,
@@ -88,7 +88,7 @@ Ext.extend(WebPayPayment.window.PaymentProperty, MODx.Window, {
                 xtype: 'textarea',
                 name: 'value',
                 anchor: '100%',
-                id: 'webpay-property-value'
+                id: 'mspp-property-value'
             }]
         }];
     },
@@ -121,4 +121,4 @@ Ext.extend(WebPayPayment.window.PaymentProperty, MODx.Window, {
     }
 
 });
-Ext.reg('webpay-window-payment-property', WebPayPayment.window.PaymentProperty);
+Ext.reg('mspp-window-payment-property', msPaymentProps.window.PaymentProperty);

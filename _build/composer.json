@@ -1,5 +1,5 @@
 {
-  "name": "alroniks/mspconf",
+  "name": "alroniks/mspaymentprops",
   "description": "Manager for payment properties for MODX miniShop2 e-commerce solution.",
   "type": "library",
   "license": "MIT",

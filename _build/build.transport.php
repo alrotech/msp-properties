@@ -10,9 +10,9 @@ error_reporting(E_ALL | E_STRICT); ini_set('display_errors',true);
 
 ini_set('date.timezone', 'Europe/Minsk');
 
-define('PKG_NAME', 'mspConf');
+define('PKG_NAME', 'msPaymentProps');
 define('PKG_NAME_LOWER', strtolower(PKG_NAME));
-define('PKG_VERSION', '0.1.0');
+define('PKG_VERSION', '0.2.0');
 define('PKG_RELEASE', 'pl');
 define('PKG_SUPPORTS_PHP', '7.1');
 define('PKG_SUPPORTS_MODX', '2.7');
@@ -38,11 +38,11 @@ $sources = [
     'validators' => $root . '_build/validators/',
     'implants' => $root . '_build/implants/',
     'plugins' => $root . 'core/components/' . PKG_NAME_LOWER . '/elements/plugins/',
-    'assets' => ['components/mspconf/'],
-    'core' => ['components/mspconf/']
+    'assets' => ['components/mspaymentprops/'],
+    'core' => ['components/mspaymentprops/']
 ];
 
-$signature = implode('-', [PKG_NAME_LOWER, PKG_VERSION, PKG_RELEASE]);
+$signature = implode('-', [PKG_NAME, PKG_VERSION, PKG_RELEASE]);
 
 $release = false;
 if (!empty($argv) && $argc > 1) {

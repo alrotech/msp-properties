@@ -8,9 +8,9 @@
 include_once 'base.class.php';
 
 /**
- * Class mspConfPaymentPropertiesDeleteProcessor
+ * Class PaymentPropertiesDeleteProcessor
  */
-class mspConfPaymentPropertiesDeleteProcessor extends mspConfPaymentPropertiesBaseProcessor
+class PaymentPropertiesDeleteProcessor extends PaymentPropertiesBaseProcessor
 {
     public function process()
     {
@@ -19,7 +19,7 @@ class mspConfPaymentPropertiesDeleteProcessor extends mspConfPaymentPropertiesBa
         $key = $this->getProperty(self::PROPERTY_KEY);
 
         if (!array_key_exists($key, $properties) && $key !== 'all') {
-            $this->failure('mspconf_props_key_nf');
+            $this->failure('mspp_props_key_nf');
         }
 
         if ($key === 'all') {
@@ -30,8 +30,8 @@ class mspConfPaymentPropertiesDeleteProcessor extends mspConfPaymentPropertiesBa
 
         return $this->savePaymentProperties($properties)
             ? $this->success()
-            : $this->failure($this->modx->lexicon('mspconf_save_props_err'));
+            : $this->failure($this->modx->lexicon('mspp_save_props_err'));
     }
 }
 
-return mspConfPaymentPropertiesDeleteProcessor::class;
+return PaymentPropertiesDeleteProcessor::class;

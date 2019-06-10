@@ -6,12 +6,11 @@
 
 Ext.ComponentMgr.onAvailable('minishop2-window-payment-update', function () {
     this.on('beforerender', function (paymentWindow) {
-        if (!/webpay/i.test(paymentWindow.record.class)) { return; } // todo - detect any? and pass config
         var tabs = this.findByType('modx-tabs').pop();
         tabs.add({
             title: _('properties'),
             items: [{
-                xtype: 'webpay-grid-payment-properties',
+                xtype: 'mspp-grid-payment-properties',
                 payment: paymentWindow.record.id
             }]
         });

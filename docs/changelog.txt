@@ -1,4 +1,7 @@
-This file shows the changes in recent releases of mspConf.
+This file shows the changes in recent releases of msPaymentProps.
 
-mspConf 0.1.0-pl ()
+msPaymentProps 0.2.0-pl (?)
+- Renamed mspConf to msPaymentProps
+
+msPaymentProps 0.1.0-pl (June 10, 2019)
 - Initial release.

@@ -6,9 +6,9 @@
  */
 
 /**
- * Class mspConfPaymentPropertiesBaseProcessor
+ * Class PaymentPropertiesBaseProcessor
  */
-class mspConfPaymentPropertiesBaseProcessor extends modProcessor
+class PaymentPropertiesBaseProcessor extends modProcessor
 {
     const PROPERTY_PAYMENT = 'payment';
     const PROPERTY_KEY = 'key';

@@ -8,9 +8,9 @@
 include_once 'base.class.php';
 
 /**
- * Class mspConfPaymentPropertiesCreateProcessor
+ * Class PaymentPropertiesCreateProcessor
  */
-class mspConfPaymentPropertiesCreateProcessor extends mspConfPaymentPropertiesBaseProcessor
+class PaymentPropertiesCreateProcessor extends PaymentPropertiesBaseProcessor
 {
     public function process()
     {
@@ -20,15 +20,15 @@ class mspConfPaymentPropertiesCreateProcessor extends mspConfPaymentPropertiesBa
         $value = $this->getProperty(self::PROPERTY_VALUE);
 
         if (array_key_exists($key, $properties)) {
-            return $this->failure($this->modx->lexicon('mspconf_duplicated_props_err'));
+            return $this->failure($this->modx->lexicon('mspp_duplicated_props_err'));
         }
 
         $properties[$key] = $value;
 
         return $this->savePaymentProperties($properties)
             ? $this->success()
-            : $this->failure($this->modx->lexicon('mspconf_save_props_err'));
+            : $this->failure($this->modx->lexicon('mspp_save_props_err'));
     }
 }
 
-return mspConfPaymentPropertiesCreateProcessor::class;
+return PaymentPropertiesCreateProcessor::class;

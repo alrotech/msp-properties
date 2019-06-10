@@ -6,8 +6,8 @@
  */
 
 $list = [
-    'mspconf' => [
-        'description' => 'mspconf',
+    'msPaymentProps' => [
+        'description' => 'Plugin for loading custom scripts for system settings and minishop2 payment settings pages.',
         'events' => [
             'OnManagerPageBeforeRender'
         ]

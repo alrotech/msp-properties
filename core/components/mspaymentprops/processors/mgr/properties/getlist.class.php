@@ -8,9 +8,9 @@
 include_once 'base.class.php';
 
 /**
- * Class mspConfPaymentPropertiesGetListProcessor
+ * Class PaymentPropertiesGetListProcessor
  */
-class mspConfPaymentPropertiesGetListProcessor extends mspConfPaymentPropertiesBaseProcessor
+class PaymentPropertiesGetListProcessor extends PaymentPropertiesBaseProcessor
 {
     public function process()
     {
@@ -27,4 +27,4 @@ class mspConfPaymentPropertiesGetListProcessor extends mspConfPaymentPropertiesB
     }
 }
 
-return mspConfPaymentPropertiesGetListProcessor::class;
+return PaymentPropertiesGetListProcessor::class;
