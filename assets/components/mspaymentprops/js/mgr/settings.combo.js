@@ -19,13 +19,7 @@ msPaymentProps.combo.Settings = function (config) {
         allowBlank: true,
         emptyText: _('mspp_select_setting'),
         editable: false,
-        hideMode: 'offsets',
-        url: MODx.config.connector_url,
-        baseParams: {
-            action: 'system/settings/getList',
-            namespace: 'minishop2',
-            area: 'ms2_payment_webpay'  // todo - set proper payment id for area
-        }
+        hideMode: 'offsets'
     });
 
     msPaymentProps.combo.Settings.superclass.constructor.call(this, config);

@@ -68,17 +68,23 @@ Ext.extend(msPaymentProps.window.PaymentProperty, MODx.Window, {
                 name: 'key',
                 anchor: '100%',
                 readOnly: !config.new,
+                url: MODx.config.connector_url,
+                baseParams: {
+                    action: 'system/settings/getList',
+                    namespace: 'minishop2',
+                    area: config.suffix === 'paypal'
+                        ? 'ms2_payment'
+                        : 'ms2_payment_' + config.suffix
+                },
                 listeners: {
                     loaded: {
                         fn: function (combo) {
                             var record = combo.getStore().getAt(0);
-                            console.log(combo);
                             this.dynamicValueField(record.get('xtype'), record.get('value'));
                         }, scope: this
                     },
                     select: {
                         fn: function (combo, record) {
-                            
                             this.dynamicValueField(record.data.xtype, record.data.value);
                         }, scope: this
                     }

@@ -11,7 +11,8 @@ Ext.ComponentMgr.onAvailable('minishop2-window-payment-update', function () {
             title: _('properties'),
             items: [{
                 xtype: 'mspp-grid-payment-properties',
-                payment: paymentWindow.record.id
+                payment: paymentWindow.record.id,
+                suffix: paymentWindow.record.class.toLowerCase()
             }]
         });
     });

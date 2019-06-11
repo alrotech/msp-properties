@@ -72,6 +72,7 @@ Ext.extend(msPaymentProps.grid.PaymentProperties, MODx.grid.Grid, {
             new: true,
             grid: this,
             payment: this.config.payment,
+            suffix: this.config.suffix,
             listeners: {
                 success: {
                     fn: function () {
@@ -109,7 +110,7 @@ Ext.extend(msPaymentProps.grid.PaymentProperties, MODx.grid.Grid, {
 
     editProperty: function editProperty(btn, e) {
         var window = MODx.load({
-            xtype: 'mmspp-window-payment-property',
+            xtype: 'mspp-window-payment-property',
             grid: this,
             payment: this.config.payment,
             listeners: {
