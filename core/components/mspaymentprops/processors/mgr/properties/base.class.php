@@ -10,9 +10,9 @@
  */
 class PaymentPropertiesBaseProcessor extends modProcessor
 {
-    const PROPERTY_PAYMENT = 'payment';
-    const PROPERTY_KEY = 'key';
-    const PROPERTY_VALUE = 'value';
+    protected const PROPERTY_PAYMENT = 'payment';
+    protected const PROPERTY_KEY = 'key';
+    protected const PROPERTY_VALUE = 'value';
 
     /** @var msPayment */
     protected $payment;
