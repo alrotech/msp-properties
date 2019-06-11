@@ -7,7 +7,7 @@
 
 // need to load
 if (!class_exists('msPaymentHandler')) {
-    $path = dirname(__DIR__, 3) . '/minishop2/model/minishop2/mspaymenthandler.class.php';
+    $path = MODX_CORE_PATH . '/components/minishop2/model/minishop2/mspaymenthandler.class.php';
     if (is_readable($path)) {
         require_once $path;
     }
@@ -58,7 +58,7 @@ abstract class ConfigurablePaymentHandler extends msPaymentHandler
         }
     }
 
-    abstract protected function getPrefix(): string;
+    abstract public static function getPrefix(): string;
 
     /**
      * @param msPayment $payment
