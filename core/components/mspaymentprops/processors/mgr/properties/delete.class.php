@@ -19,7 +19,7 @@ class PaymentPropertiesDeleteProcessor extends PaymentPropertiesBaseProcessor
         $key = $this->getProperty(self::PROPERTY_KEY);
 
         if (!array_key_exists($key, $properties) && $key !== 'all') {
-            $this->failure('mspp_props_key_nf');
+            $this->failure('mspp_property_key_not_found');
         }
 
         if ($key === 'all') {
@@ -30,7 +30,7 @@ class PaymentPropertiesDeleteProcessor extends PaymentPropertiesBaseProcessor
 
         return $this->savePaymentProperties($properties)
             ? $this->success()
-            : $this->failure($this->modx->lexicon('mspp_save_props_err'));
+            : $this->failure($this->modx->lexicon('mspp_save_properties_error'));
     }
 }
 

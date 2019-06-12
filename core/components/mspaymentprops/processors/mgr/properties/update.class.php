@@ -23,7 +23,7 @@ class PaymentPropertiesUpdateProcessor extends PaymentPropertiesBaseProcessor
 
         return $this->savePaymentProperties($properties)
             ? $this->success()
-            : $this->failure($this->modx->lexicon('mspp_save_props_err'));
+            : $this->failure($this->modx->lexicon('mspp_save_properties_error'));
     }
 }
 

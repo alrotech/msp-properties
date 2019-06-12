@@ -17,7 +17,7 @@ msPaymentProps.combo.Settings = function (config) {
         typeAhead: false,
         preselectValue: false,
         allowBlank: true,
-        emptyText: _('mspp_select_setting'),
+        emptyText: _('mspp_select_property'),
         editable: false,
         hideMode: 'offsets'
     });

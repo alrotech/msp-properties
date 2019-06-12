@@ -20,14 +20,14 @@ class PaymentPropertiesCreateProcessor extends PaymentPropertiesBaseProcessor
         $value = $this->getProperty(self::PROPERTY_VALUE);
 
         if (array_key_exists($key, $properties)) {
-            return $this->failure($this->modx->lexicon('mspp_duplicated_props_err'));
+            return $this->failure($this->modx->lexicon('mspp_duplicated_property_error'));
         }
 
         $properties[$key] = $value;
 
         return $this->savePaymentProperties($properties)
             ? $this->success()
-            : $this->failure($this->modx->lexicon('mspp_save_props_err'));
+            : $this->failure($this->modx->lexicon('mspp_save_properties_error'));
     }
 }
 

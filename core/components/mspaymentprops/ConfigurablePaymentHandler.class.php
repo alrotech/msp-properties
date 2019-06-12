@@ -48,6 +48,7 @@ abstract class ConfigurablePaymentHandler extends msPaymentHandler
         $ownConnector = $modx->getOption('assets_url') . 'components/mspaymentprops/connector.php';
 
         $modx->controller->addLexiconTopic('minishop2:default');
+        $modx->controller->addLexiconTopic('mspaymentprops:default');
         $modx->controller->addLexiconTopic('core:propertyset');
         $modx->controller->addJavascript(MODX_ASSETS_URL . 'components/mspaymentprops/js/mgr/mspaymentprops.js');
         $modx->controller->addHtml('<script>msPaymentProps.ms2Connector = "' . $ms2connector . '";</script>');

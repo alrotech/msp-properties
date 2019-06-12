@@ -85,8 +85,8 @@ Ext.extend(msPaymentProps.grid.PaymentProperties, MODx.grid.Grid, {
 
     deleteProperty: function deleteProperty() {
         MODx.msg.confirm({
-            title: _('mspp_remove_setting'),
-            text: _('mspp_remove_setting_desc'),
+            title: _('mspp_remove_property'),
+            text: _('mspp_remove_property_confirmation'),
             url: msPaymentProps.ownConnector,
             params: {
                 action: 'mgr/properties/delete',
@@ -142,7 +142,7 @@ Ext.extend(msPaymentProps.grid.PaymentProperties, MODx.grid.Grid, {
     clearAll: function clearAll() {
         MODx.msg.confirm({
             title: _('mspp_remove_all'),
-            text: _('mspp_remove_all_desc'),
+            text: _('mspp_remove_all_confirmation'),
             url: msPaymentProps.ownConnector,
             params: {
                 action: 'mgr/properties/delete',

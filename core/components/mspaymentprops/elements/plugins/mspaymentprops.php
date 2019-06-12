@@ -5,7 +5,7 @@
  * Full license text placed in the LICENSE file in the repository or in the license.txt file in the package.
  */
 
-require_once MODX_CORE_PATH . '/components/mspaymentprops/ConfigurablePaymentHandler.class.php';
+require_once MODX_CORE_PATH . 'components/mspaymentprops/ConfigurablePaymentHandler.class.php';
 
 switch ($modx->event->name) {
     case 'OnManagerPageBeforeRender':
