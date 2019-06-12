@@ -63,7 +63,7 @@ Ext.extend(msPaymentProps.window.PaymentProperty, MODx.Window, {
             defaults: { msgTarget: 'under', autoHeight: true },
             id: 'mspp-window-payment-property-form',
             items: [{
-                fieldLabel: _('parameter'),
+                fieldLabel: _('property'),
                 xtype: 'mspp-combo-settings',
                 name: 'key',
                 anchor: '100%',
