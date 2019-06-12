@@ -66,7 +66,7 @@ abstract class ConfigurablePaymentHandler extends msPaymentHandler
      * @return array
      * @throws ReflectionException
      */
-    protected function getProperties(msPayment $payment): array
+    public function getProperties(msPayment $payment): array
     {
         if (!is_subclass_of(get_class($payment), msPayment::class)) {
             $this->log('Passed object is not a payment object');
@@ -82,11 +82,18 @@ abstract class ConfigurablePaymentHandler extends msPaymentHandler
             if (strpos($constant, 'OPTION') !== 0) { continue; }
             $key = static::getPrefix() . '_' . $value;
             $configuration[$value] = array_key_exists($key, $properties)
-                ? $properties[$key]
+                ? $this->processYesNo($properties[$key])
                 : $this->getMODX()->getOption($key, null);
         }
 
         return array_merge($configuration, $this->config);
+    }
+
+    private function processYesNo($value)
+    {
+        $map = ['Yes' => true, 'No' => false];
+
+        return $map[$value] ?? $value;
     }
 
     protected function getMODX(): xPDO

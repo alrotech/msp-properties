@@ -44,7 +44,6 @@ Ext.extend(msPaymentProps.window.PaymentProperty, MODx.Window, {
     dynamicValueField: function dynamicValueField(xtype, value) {
         var form = Ext.getCmp('mspp-window-payment-property-form');
         var field = Ext.getCmp('mspp-property-value');
-
         form.remove(field);
         form.add({
             name: 'value',

@@ -113,6 +113,7 @@ Ext.extend(msPaymentProps.grid.PaymentProperties, MODx.grid.Grid, {
             xtype: 'mspp-window-payment-property',
             grid: this,
             payment: this.config.payment,
+            suffix: this.config.suffix,
             listeners: {
                 success: {
                     fn: function () {
