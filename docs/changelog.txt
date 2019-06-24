@@ -1,6 +1,13 @@
 This file shows the changes in recent releases of msPaymentProps.
 
-msPaymentProps 0.2.0-pl (?)
+msPaymentProps 0.3.0-pl (June 25, 2019)
+- Improved processing boolean values
+- Improved lexicons
+- Fixed issues in main class with wrong path
+- Make proper loading of settings based on payment class
+- Move loadExtraJs to basic class
+
+msPaymentProps 0.2.0-pl (June 10, 2019)
 - Renamed mspConf to msPaymentProps
 
 msPaymentProps 0.1.0-pl (June 10, 2019)

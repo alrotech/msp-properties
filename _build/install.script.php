@@ -16,7 +16,7 @@ $modx->setLogTarget();
 
 $modx->runProcessor('workspace/packages/scanlocal');
 $answer = $modx->runProcessor('workspace/packages/install',
-    ['signature' => 'mspaymentprops-0.2.0-pl']
+    ['signature' => 'mspaymentprops-0.3git.0-pl']
 );
 
 $response = $answer->getResponse();
