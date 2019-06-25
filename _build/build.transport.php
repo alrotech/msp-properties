@@ -12,7 +12,7 @@ ini_set('date.timezone', 'Europe/Minsk');
 
 define('PKG_NAME', 'msPaymentProps');
 define('PKG_NAME_LOWER', strtolower(PKG_NAME));
-define('PKG_VERSION', '0.3.0');
+define('PKG_VERSION', '0.3.1');
 define('PKG_RELEASE', 'pl');
 define('PKG_SUPPORTS_PHP', '7.1');
 define('PKG_SUPPORTS_MODX', '2.7');
@@ -42,7 +42,7 @@ $sources = [
     'core' => ['components/mspaymentprops/']
 ];
 
-$signature = implode('-', [PKG_NAME, PKG_VERSION, PKG_RELEASE]);
+$signature = implode('-', [PKG_NAME_LOWER, PKG_VERSION, PKG_RELEASE]);
 
 $release = false;
 if (!empty($argv) && $argc > 1) {

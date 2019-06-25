@@ -1,5 +1,8 @@
 This file shows the changes in recent releases of msPaymentProps.
 
+msPaymentProps 0.3.1-pl (June 25, 2019)
+- Make package signature in lowercase
+
 msPaymentProps 0.3.0-pl (June 25, 2019)
 - Improved processing boolean values
 - Improved lexicons
