@@ -6,7 +6,12 @@
 
 Ext.ComponentMgr.onAvailable('minishop2-window-payment-update', function () {
     this.on('beforerender', function (paymentWindow) {
-        var tabs = this.findByType('modx-tabs').pop();
+        const tabs = this.findByType('modx-tabs').pop();
+
+        if (!paymentWindow.record.class) {
+            return;
+        }
+
         tabs.add({
             title: _('properties'),
             items: [{

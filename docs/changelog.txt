@@ -1,12 +1,15 @@
 This file shows the changes in recent releases of msPaymentProps.
 
+msPaymentProps 0.3.2-pl (June 25, 2019)
+- Added check for class value in payment method
+
 msPaymentProps 0.3.1-pl (June 25, 2019)
 - Make package signature in lowercase
 
 msPaymentProps 0.3.0-pl (June 25, 2019)
 - Improved processing boolean values
 - Improved lexicons
-- Fixed issues in main class with wrong path
+- Fixed issues in main class with the wrong path
 - Make proper loading of settings based on payment class
 - Move loadExtraJs to basic class
 
