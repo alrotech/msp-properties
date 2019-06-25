@@ -1,4 +1,4 @@
-cd.PHONY: build install
+PHONY: build install
 
 build:
 	php _build/build.transport.php
