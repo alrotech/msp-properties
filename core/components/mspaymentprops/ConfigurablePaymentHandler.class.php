@@ -99,7 +99,7 @@ abstract class ConfigurablePaymentHandler extends msPaymentHandler
             $this->modx->lexicon('no', [], $managerLanguage) => false
         ];
 
-        return $map[$value];
+        return $map[$value] ?? $value;
     }
 
     protected function getMODX(): xPDO
