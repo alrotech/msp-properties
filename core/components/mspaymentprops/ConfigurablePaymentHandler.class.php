@@ -91,9 +91,15 @@ abstract class ConfigurablePaymentHandler extends msPaymentHandler
 
     private function processYesNo($value)
     {
-        $map = ['Yes' => true, 'No' => false];
+        $managerLanguage = $this->modx->getOption('manager_language');
+        $this->modx->lexicon->load($managerLanguage . ':core:default');
 
-        return $map[$value] ?? $value;
+        $map = [
+            $this->modx->lexicon('yes', [], $managerLanguage) => true,
+            $this->modx->lexicon('no', [], $managerLanguage) => false
+        ];
+
+        return $map[$value];
     }
 
     protected function getMODX(): xPDO
