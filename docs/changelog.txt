@@ -1,5 +1,8 @@
 This file shows the changes in recent releases of msPaymentProps.
 
+msPaymentProps 0.3.3-pl (Jan 22, 2021)
+- Fix handling Yes/No values, when different from English language is used for manager
+
 msPaymentProps 0.3.2-pl (June 25, 2019)
 - Added check for class value in payment method
 

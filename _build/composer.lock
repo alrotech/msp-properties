@@ -4,21 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "005da0c36d08de8de844ac9d8d7a3ec1",
+    "content-hash": "54c868af880655d1332bb1d3534c2b0c",
     "packages": [],
     "packages-dev": [
         {
             "name": "modx/revolution",
-            "version": "v2.7.1-pl",
+            "version": "v2.8.1-pl",
             "source": {
                 "type": "git",
                 "url": "https://github.com/modxcms/revolution.git",
-                "reference": "8e18b7c368ee93c1894a170c3c59b5c011fee720"
+                "reference": "18f052dd79ae25a5303cc7a6e4cf23b31313ee68"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/modxcms/revolution/zipball/8e18b7c368ee93c1894a170c3c59b5c011fee720",
-                "reference": "8e18b7c368ee93c1894a170c3c59b5c011fee720",
+                "url": "https://api.github.com/repos/modxcms/revolution/zipball/18f052dd79ae25a5303cc7a6e4cf23b31313ee68",
+                "reference": "18f052dd79ae25a5303cc7a6e4cf23b31313ee68",
                 "shasum": ""
             },
             "require": {
@@ -54,14 +54,14 @@
                 }
             ],
             "description": "MODX Revolution is a Content Management System",
-            "homepage": "http://modx.com/",
+            "homepage": "https://modx.com/",
             "keywords": [
                 "cms",
                 "content",
                 "routing",
                 "templating"
             ],
-            "time": "2019-02-14T17:11:26+00:00"
+            "time": "2020-10-22T15:51:51+00:00"
         }
     ],
     "aliases": [],
@@ -70,5 +70,6 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "1.1.0"
 }
