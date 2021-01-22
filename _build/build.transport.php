@@ -12,7 +12,7 @@ ini_set('date.timezone', 'Europe/Minsk');
 
 define('PKG_NAME', 'msPaymentProps');
 define('PKG_NAME_LOWER', strtolower(PKG_NAME));
-define('PKG_VERSION', '0.3.3');
+define('PKG_VERSION', '0.3.4');
 define('PKG_RELEASE', 'stable');
 define('PKG_SUPPORTS_PHP', '7.2');
 define('PKG_SUPPORTS_MODX', '2.7');
