@@ -15,7 +15,8 @@ switch ($modx->event->name) {
                 ConfigurablePaymentHandler::loadExtraJs($modx, [
                     'status.combo.js',
                     'resource.combo.js'
-                ]); break;
+                ]);
+                break;
             case 'mgr/settings':
                 ConfigurablePaymentHandler::loadExtraJs($modx, [
                     'status.combo.js',
